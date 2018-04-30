@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body onload=" draw()">
+<canvas id="sketch" width="600" height="600">
+</canvas>
+<script>
+	function draw() {
+		var sketch = document.getElementById('sketch');
+		var context = sketch.getContext("2d");
+		
+		//REDS
+		var requestRow = parseInt(prompt("How many columns in a row do you want?"));
+		
+		for(var i = 1; i <= requestRow; i = i + 1){		
+			context.fillStyle = "#00BFFF"
+			context.beginPath();
+			context.arc(20, i * 40,20,0,2 * Math.PI, true);
+			context.closePath();
+			context.fill();
+		
+		}
+	}
+	
+</script>
+</body>
+</html>
